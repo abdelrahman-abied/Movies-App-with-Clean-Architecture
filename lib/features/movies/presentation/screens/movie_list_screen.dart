@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/theme/theme_extansions.dart';
+import 'package:flutter_application_1/features/settings/presentation/providers/settings_providers.dart';
+import 'package:flutter_application_1/features/settings/presentation/screens/settings_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../providers/movie_providers.dart';
@@ -65,7 +67,7 @@ class _MovieListScreenState extends ConsumerState<MovieListScreen> with TickerPr
               color: Theme.of(context).colorTheme.iconColor,
             ),
             onPressed: () {
-              ref.read(themeProvider.notifier).toggleTheme();
+              ref.read(settingsStateProvider.notifier).toggleTheme();
             },
           );
         }),
@@ -74,6 +76,16 @@ class _MovieListScreenState extends ConsumerState<MovieListScreen> with TickerPr
             icon: const Icon(Icons.search),
             onPressed: () {
               // Navigate to search screen
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.settings),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const SettingsScreen(),
+                ),
+              );
             },
           ),
         ],

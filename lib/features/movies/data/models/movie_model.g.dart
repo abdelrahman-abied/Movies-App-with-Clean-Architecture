@@ -10,7 +10,7 @@ MovieModel _$MovieModelFromJson(Map<String, dynamic> json) => MovieModel(
       id: (json['id'] as num).toInt(),
       title: json['title'] as String,
       overview: json['overview'] as String?,
-      posterPath: json['poster_path'] as String?,
+      posterPath: json['poster_path'] as String? ?? '',
       backdropPath: json['backdrop_path'] as String?,
       voteAverage: (json['voteAverage'] as num?)?.toDouble(),
       voteCount: (json['voteCount'] as num?)?.toInt(),

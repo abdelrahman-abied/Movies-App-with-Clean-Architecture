@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'movie_detail.freezed.dart';
 
 @freezed
-class MovieDetail with _$MovieDetail {
+abstract class MovieDetail with _$MovieDetail {
   const factory MovieDetail({
     required int id,
     required String title,
@@ -52,8 +52,7 @@ class MovieDetail with _$MovieDetail {
   int get safeRuntime => runtime ?? 0;
   int get safeBudget => budget ?? 0;
   int get safeRevenue => revenue ?? 0;
-  List<ProductionCompany> get safeProductionCompanies =>
-      productionCompanies ?? [];
+  List<ProductionCompany> get safeProductionCompanies => productionCompanies ?? [];
   String get safeStatus => status ?? 'Unknown';
   String get safeTagline => tagline ?? '';
   bool get safeAdult => adult ?? false;
@@ -64,7 +63,7 @@ class MovieDetail with _$MovieDetail {
 }
 
 @freezed
-class Genre with _$Genre {
+abstract class Genre with _$Genre {
   const factory Genre({
     required int id,
     required String name,
@@ -72,7 +71,7 @@ class Genre with _$Genre {
 }
 
 @freezed
-class ProductionCompany with _$ProductionCompany {
+abstract class ProductionCompany with _$ProductionCompany {
   const factory ProductionCompany({
     required int id,
     required String name,

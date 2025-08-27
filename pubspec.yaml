@@ -57,6 +57,9 @@ dependencies:
   # Utils
   equatable: ^2.0.5
   dartz: ^0.10.1
+  
+  # Local Storage
+  shared_preferences: ^2.2.2
 
   # Freezed for immutable data classes
   freezed_annotation: ^3.1.0

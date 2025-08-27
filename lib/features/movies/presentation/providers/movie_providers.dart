@@ -1,6 +1,5 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/network/dio_client.dart';
@@ -19,7 +18,7 @@ import '../state/movie_state.dart';
 import '../state/search_movies_notifier.dart';
 
 // API Key - Replace with your actual TMDB API key
-const String tmdbApiKey = 'YOUR_TMDB_API_KEY_HERE';
+const String tmdbApiKey = 'e7079d79292c2a0449a4c141c026ef28';
 
 // Dio provider
 final dioProvider = Provider<Dio>((ref) {
@@ -100,15 +99,3 @@ final searchMoviesNotifierProvider = StateNotifierProvider<SearchMoviesNotifier,
   final searchMovies = ref.watch(searchMoviesProvider);
   return SearchMoviesNotifier(searchMovies);
 });
-
-final themeProvider = StateNotifierProvider<ThemeProvider, ThemeMode>((ref) {
-  return ThemeProvider();
-});
-
-class ThemeProvider extends StateNotifier<ThemeMode> {
-  ThemeProvider() : super(ThemeMode.light);
-
-  void toggleTheme() {
-    state = state == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
-  }
-}

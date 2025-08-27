@@ -1,8 +1,9 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import '../../domain/entities/movie_detail.dart';
+
 import '../../domain/entities/movie.dart';
+import '../../domain/entities/movie_detail.dart';
 import '../providers/movie_providers.dart';
 import '../widgets/error_widget.dart';
 
@@ -82,105 +83,6 @@ class _MovieDetailsScreenState extends ConsumerState<MovieDetailsScreen> {
                       ),
                     ),
                   ),
-                  // Movie poster overlay
-                  Positioned(
-                    bottom: 16,
-                    left: 16,
-                    child: Row(
-                      children: [
-                        // Poster
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: SizedBox(
-                            width: 100,
-                            height: 150,
-                            child: widget.movie.posterPath != null
-                                ? CachedNetworkImage(
-                                    imageUrl: widget.movie.fullPosterPath,
-                                    fit: BoxFit.cover,
-                                    placeholder: (context, url) => Container(
-                                      color: Colors.grey[600],
-                                      child: const Center(
-                                        child: CircularProgressIndicator(),
-                                      ),
-                                    ),
-                                    errorWidget: (context, url, error) => Container(
-                                      color: Colors.grey[600],
-                                      child: const Icon(
-                                        Icons.movie,
-                                        size: 50,
-                                        color: Colors.white54,
-                                      ),
-                                    ),
-                                  )
-                                : Container(
-                                    color: Colors.grey[600],
-                                    child: const Icon(
-                                      Icons.movie,
-                                      size: 50,
-                                      color: Colors.white54,
-                                    ),
-                                  ),
-                          ),
-                        ),
-                        const SizedBox(width: 16),
-                        // Basic info
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                widget.movie.title,
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                              const SizedBox(height: 8),
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.amber[400],
-                                    size: 20,
-                                  ),
-                                  const SizedBox(width: 4),
-                                  Text(
-                                    widget.movie.safeVoteAverage.toStringAsFixed(1),
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                  const SizedBox(width: 8),
-                                  Text(
-                                    '(${widget.movie.safeVoteCount})',
-                                    style: const TextStyle(
-                                      color: Colors.white70,
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(height: 4),
-                              if (widget.movie.safeReleaseDate.isNotEmpty)
-                                Text(
-                                  _formatDate(widget.movie.safeReleaseDate),
-                                  style: const TextStyle(
-                                    color: Colors.white70,
-                                    fontSize: 14,
-                                  ),
-                                ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
                 ],
               ),
             ),
@@ -194,7 +96,7 @@ class _MovieDetailsScreenState extends ConsumerState<MovieDetailsScreen> {
             child: Consumer(
               builder: (context, ref, child) {
                 final movieDetailsState = ref.watch(movieDetailsProvider(widget.movie.id));
-                
+
                 return movieDetailsState.when(
                   data: (movieDetail) => _buildMovieDetailsContent(movieDetail),
                   loading: () => const Padding(
@@ -206,7 +108,8 @@ class _MovieDetailsScreenState extends ConsumerState<MovieDetailsScreen> {
                     child: MovieErrorWidget(
                       message: error.toString(),
                       code: null,
-                      onRetry: () => ref.read(movieDetailsProvider(widget.movie.id).notifier).getMovieDetails(widget.movie.id),
+                      onRetry: () =>
+                          ref.read(movieDetailsProvider(widget.movie.id).notifier).getMovieDetails(widget.movie.id),
                     ),
                   ),
                 );
@@ -243,7 +146,7 @@ class _MovieDetailsScreenState extends ConsumerState<MovieDetailsScreen> {
             ),
             const SizedBox(height: 24),
           ],
-          
+
           // Genres
           if (movieDetail.safeGenres.isNotEmpty) ...[
             const Text(
@@ -270,7 +173,7 @@ class _MovieDetailsScreenState extends ConsumerState<MovieDetailsScreen> {
             ),
             const SizedBox(height: 24),
           ],
-          
+
           // Additional details
           const Text(
             'Details',
@@ -279,13 +182,10 @@ class _MovieDetailsScreenState extends ConsumerState<MovieDetailsScreen> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(height: 16),
-          
+
           // Details grid
           _buildDetailsGrid(movieDetail),
-          
-          const SizedBox(height: 24),
-          
+
           // Production companies
           if (movieDetail.safeProductionCompanies.isNotEmpty) ...[
             const Text(
@@ -295,7 +195,6 @@ class _MovieDetailsScreenState extends ConsumerState<MovieDetailsScreen> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 16),
             ...movieDetail.safeProductionCompanies.map((company) {
               return Padding(
                 padding: const EdgeInsets.only(bottom: 8.0),
@@ -356,7 +255,7 @@ class _MovieDetailsScreenState extends ConsumerState<MovieDetailsScreen> {
 
   Widget _buildDetailsGrid(MovieDetail movieDetail) {
     final details = <MapEntry<String, String>>[];
-    
+
     if (movieDetail.safeRuntime > 0) {
       details.add(MapEntry('Runtime', '${movieDetail.safeRuntime} min'));
     }
@@ -375,43 +274,46 @@ class _MovieDetailsScreenState extends ConsumerState<MovieDetailsScreen> {
     if (movieDetail.safePopularity > 0) {
       details.add(MapEntry('Popularity', movieDetail.safePopularity.toStringAsFixed(1)));
     }
-    
+
     if (details.isEmpty) return const SizedBox.shrink();
-    
-    return GridView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        childAspectRatio: 3,
-        crossAxisSpacing: 16,
-        mainAxisSpacing: 16,
+
+    return Container(
+      color: Colors.amber,
+      child: GridView.builder(
+        padding: EdgeInsets.zero,
+        shrinkWrap: true,
+        physics: const NeverScrollableScrollPhysics(),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          childAspectRatio: 3,
+          crossAxisSpacing: 8,
+          mainAxisSpacing: 4,
+        ),
+        itemCount: details.length,
+        itemBuilder: (context, index) {
+          final detail = details[index];
+          return Column(
+            children: [
+              Text(
+                detail.key,
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey[600],
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                detail.value,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+          );
+        },
       ),
-      itemCount: details.length,
-      itemBuilder: (context, index) {
-        final detail = details[index];
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              detail.key,
-              style: TextStyle(
-                fontSize: 14,
-                color: Colors.grey[600],
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            const SizedBox(height: 4),
-            Text(
-              detail.value,
-              style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ],
-        );
-      },
     );
   }
 

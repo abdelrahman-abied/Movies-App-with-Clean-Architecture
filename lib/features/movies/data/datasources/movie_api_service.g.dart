@@ -6,13 +6,10 @@ part of 'movie_api_service.dart';
 // RetrofitGenerator
 // **************************************************************************
 
-// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
+// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations,unused_element_parameter
 
 class _MovieApiService implements MovieApiService {
-  _MovieApiService(
-    this._dio, {
-    this.baseUrl,
-  }) {
+  _MovieApiService(this._dio, {this.baseUrl, this.errorLogger}) {
     baseUrl ??= 'https://api.themoviedb.org/3/';
   }
 
@@ -20,39 +17,41 @@ class _MovieApiService implements MovieApiService {
 
   String? baseUrl;
 
+  final ParseErrorLogger? errorLogger;
+
   @override
   Future<MovieResponseModel> getPopularMovies(
     String apiKey,
     String language,
     int page,
   ) async {
-    const _extra = <String, dynamic>{};
+    final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'api_key': apiKey,
       r'language': language,
       r'page': page,
     };
     final _headers = <String, dynamic>{};
-    final Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<MovieResponseModel>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              'movie/popular',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = MovieResponseModel.fromJson(_result.data!);
-    return value;
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<MovieResponseModel>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'movie/popular',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late MovieResponseModel _value;
+    try {
+      _value = MovieResponseModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -61,33 +60,33 @@ class _MovieApiService implements MovieApiService {
     String language,
     int page,
   ) async {
-    const _extra = <String, dynamic>{};
+    final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'api_key': apiKey,
       r'language': language,
       r'page': page,
     };
     final _headers = <String, dynamic>{};
-    final Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<MovieResponseModel>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              'movie/top_rated',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = MovieResponseModel.fromJson(_result.data!);
-    return value;
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<MovieResponseModel>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'movie/top_rated',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late MovieResponseModel _value;
+    try {
+      _value = MovieResponseModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -96,33 +95,33 @@ class _MovieApiService implements MovieApiService {
     String language,
     int page,
   ) async {
-    const _extra = <String, dynamic>{};
+    final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'api_key': apiKey,
       r'language': language,
       r'page': page,
     };
     final _headers = <String, dynamic>{};
-    final Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<MovieResponseModel>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              'movie/now_playing',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = MovieResponseModel.fromJson(_result.data!);
-    return value;
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<MovieResponseModel>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'movie/now_playing',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late MovieResponseModel _value;
+    try {
+      _value = MovieResponseModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -131,33 +130,33 @@ class _MovieApiService implements MovieApiService {
     String language,
     int page,
   ) async {
-    const _extra = <String, dynamic>{};
+    final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'api_key': apiKey,
       r'language': language,
       r'page': page,
     };
     final _headers = <String, dynamic>{};
-    final Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<MovieResponseModel>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              'movie/upcoming',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = MovieResponseModel.fromJson(_result.data!);
-    return value;
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<MovieResponseModel>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'movie/upcoming',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late MovieResponseModel _value;
+    try {
+      _value = MovieResponseModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -166,32 +165,32 @@ class _MovieApiService implements MovieApiService {
     String apiKey,
     String language,
   ) async {
-    const _extra = <String, dynamic>{};
+    final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'api_key': apiKey,
       r'language': language,
     };
     final _headers = <String, dynamic>{};
-    final Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<MovieDetailModel>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              'movie/${movieId}',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = MovieDetailModel.fromJson(_result.data!);
-    return value;
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<MovieDetailModel>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'movie/${movieId}',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late MovieDetailModel _value;
+    try {
+      _value = MovieDetailModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -201,7 +200,7 @@ class _MovieApiService implements MovieApiService {
     String query,
     int page,
   ) async {
-    const _extra = <String, dynamic>{};
+    final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'api_key': apiKey,
       r'language': language,
@@ -209,26 +208,26 @@ class _MovieApiService implements MovieApiService {
       r'page': page,
     };
     final _headers = <String, dynamic>{};
-    final Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<MovieResponseModel>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              'search/movie',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = MovieResponseModel.fromJson(_result.data!);
-    return value;
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<MovieResponseModel>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'search/movie',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late MovieResponseModel _value;
+    try {
+      _value = MovieResponseModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
@@ -244,10 +243,7 @@ class _MovieApiService implements MovieApiService {
     return requestOptions;
   }
 
-  String _combineBaseUrls(
-    String dioBaseUrl,
-    String? baseUrl,
-  ) {
+  String _combineBaseUrls(String dioBaseUrl, String? baseUrl) {
     if (baseUrl == null || baseUrl.trim().isEmpty) {
       return dioBaseUrl;
     }

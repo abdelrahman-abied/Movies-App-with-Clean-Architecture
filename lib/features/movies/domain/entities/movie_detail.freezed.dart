@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,195 +9,112 @@ part of 'movie_detail.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$MovieDetail {
-  int get id => throw _privateConstructorUsedError;
-  String get title => throw _privateConstructorUsedError;
-  String? get overview => throw _privateConstructorUsedError;
-  String? get posterPath => throw _privateConstructorUsedError;
-  String? get backdropPath => throw _privateConstructorUsedError;
-  double? get voteAverage => throw _privateConstructorUsedError;
-  int? get voteCount => throw _privateConstructorUsedError;
-  String? get releaseDate => throw _privateConstructorUsedError;
-  List<Genre>? get genres => throw _privateConstructorUsedError;
-  int? get runtime => throw _privateConstructorUsedError;
-  int? get budget => throw _privateConstructorUsedError;
-  int? get revenue => throw _privateConstructorUsedError;
-  List<ProductionCompany>? get productionCompanies =>
-      throw _privateConstructorUsedError;
-  String? get status => throw _privateConstructorUsedError;
-  String? get tagline => throw _privateConstructorUsedError;
-  bool? get adult => throw _privateConstructorUsedError;
-  String? get originalLanguage => throw _privateConstructorUsedError;
-  String? get originalTitle => throw _privateConstructorUsedError;
-  double? get popularity => throw _privateConstructorUsedError;
-  bool? get video => throw _privateConstructorUsedError;
+  int get id;
+  String get title;
+  String? get overview;
+  String? get posterPath;
+  String? get backdropPath;
+  double? get voteAverage;
+  int? get voteCount;
+  String? get releaseDate;
+  List<Genre>? get genres;
+  int? get runtime;
+  int? get budget;
+  int? get revenue;
+  List<ProductionCompany>? get productionCompanies;
+  String? get status;
+  String? get tagline;
+  bool? get adult;
+  String? get originalLanguage;
+  String? get originalTitle;
+  double? get popularity;
+  bool? get video;
 
-  @JsonKey(ignore: true)
-  $MovieDetailCopyWith<MovieDetail> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $MovieDetailCopyWith<$Res> {
-  factory $MovieDetailCopyWith(
-          MovieDetail value, $Res Function(MovieDetail) then) =
-      _$MovieDetailCopyWithImpl<$Res, MovieDetail>;
-  @useResult
-  $Res call(
-      {int id,
-      String title,
-      String? overview,
-      String? posterPath,
-      String? backdropPath,
-      double? voteAverage,
-      int? voteCount,
-      String? releaseDate,
-      List<Genre>? genres,
-      int? runtime,
-      int? budget,
-      int? revenue,
-      List<ProductionCompany>? productionCompanies,
-      String? status,
-      String? tagline,
-      bool? adult,
-      String? originalLanguage,
-      String? originalTitle,
-      double? popularity,
-      bool? video});
-}
-
-/// @nodoc
-class _$MovieDetailCopyWithImpl<$Res, $Val extends MovieDetail>
-    implements $MovieDetailCopyWith<$Res> {
-  _$MovieDetailCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of MovieDetail
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $MovieDetailCopyWith<MovieDetail> get copyWith =>
+      _$MovieDetailCopyWithImpl<MovieDetail>(this as MovieDetail, _$identity);
+
   @override
-  $Res call({
-    Object? id = null,
-    Object? title = null,
-    Object? overview = freezed,
-    Object? posterPath = freezed,
-    Object? backdropPath = freezed,
-    Object? voteAverage = freezed,
-    Object? voteCount = freezed,
-    Object? releaseDate = freezed,
-    Object? genres = freezed,
-    Object? runtime = freezed,
-    Object? budget = freezed,
-    Object? revenue = freezed,
-    Object? productionCompanies = freezed,
-    Object? status = freezed,
-    Object? tagline = freezed,
-    Object? adult = freezed,
-    Object? originalLanguage = freezed,
-    Object? originalTitle = freezed,
-    Object? popularity = freezed,
-    Object? video = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      overview: freezed == overview
-          ? _value.overview
-          : overview // ignore: cast_nullable_to_non_nullable
-              as String?,
-      posterPath: freezed == posterPath
-          ? _value.posterPath
-          : posterPath // ignore: cast_nullable_to_non_nullable
-              as String?,
-      backdropPath: freezed == backdropPath
-          ? _value.backdropPath
-          : backdropPath // ignore: cast_nullable_to_non_nullable
-              as String?,
-      voteAverage: freezed == voteAverage
-          ? _value.voteAverage
-          : voteAverage // ignore: cast_nullable_to_non_nullable
-              as double?,
-      voteCount: freezed == voteCount
-          ? _value.voteCount
-          : voteCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      releaseDate: freezed == releaseDate
-          ? _value.releaseDate
-          : releaseDate // ignore: cast_nullable_to_non_nullable
-              as String?,
-      genres: freezed == genres
-          ? _value.genres
-          : genres // ignore: cast_nullable_to_non_nullable
-              as List<Genre>?,
-      runtime: freezed == runtime
-          ? _value.runtime
-          : runtime // ignore: cast_nullable_to_non_nullable
-              as int?,
-      budget: freezed == budget
-          ? _value.budget
-          : budget // ignore: cast_nullable_to_non_nullable
-              as int?,
-      revenue: freezed == revenue
-          ? _value.revenue
-          : revenue // ignore: cast_nullable_to_non_nullable
-              as int?,
-      productionCompanies: freezed == productionCompanies
-          ? _value.productionCompanies
-          : productionCompanies // ignore: cast_nullable_to_non_nullable
-              as List<ProductionCompany>?,
-      status: freezed == status
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as String?,
-      tagline: freezed == tagline
-          ? _value.tagline
-          : tagline // ignore: cast_nullable_to_non_nullable
-              as String?,
-      adult: freezed == adult
-          ? _value.adult
-          : adult // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      originalLanguage: freezed == originalLanguage
-          ? _value.originalLanguage
-          : originalLanguage // ignore: cast_nullable_to_non_nullable
-              as String?,
-      originalTitle: freezed == originalTitle
-          ? _value.originalTitle
-          : originalTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      popularity: freezed == popularity
-          ? _value.popularity
-          : popularity // ignore: cast_nullable_to_non_nullable
-              as double?,
-      video: freezed == video
-          ? _value.video
-          : video // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is MovieDetail &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.overview, overview) ||
+                other.overview == overview) &&
+            (identical(other.posterPath, posterPath) ||
+                other.posterPath == posterPath) &&
+            (identical(other.backdropPath, backdropPath) ||
+                other.backdropPath == backdropPath) &&
+            (identical(other.voteAverage, voteAverage) ||
+                other.voteAverage == voteAverage) &&
+            (identical(other.voteCount, voteCount) ||
+                other.voteCount == voteCount) &&
+            (identical(other.releaseDate, releaseDate) ||
+                other.releaseDate == releaseDate) &&
+            const DeepCollectionEquality().equals(other.genres, genres) &&
+            (identical(other.runtime, runtime) || other.runtime == runtime) &&
+            (identical(other.budget, budget) || other.budget == budget) &&
+            (identical(other.revenue, revenue) || other.revenue == revenue) &&
+            const DeepCollectionEquality()
+                .equals(other.productionCompanies, productionCompanies) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.tagline, tagline) || other.tagline == tagline) &&
+            (identical(other.adult, adult) || other.adult == adult) &&
+            (identical(other.originalLanguage, originalLanguage) ||
+                other.originalLanguage == originalLanguage) &&
+            (identical(other.originalTitle, originalTitle) ||
+                other.originalTitle == originalTitle) &&
+            (identical(other.popularity, popularity) ||
+                other.popularity == popularity) &&
+            (identical(other.video, video) || other.video == video));
+  }
+
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        id,
+        title,
+        overview,
+        posterPath,
+        backdropPath,
+        voteAverage,
+        voteCount,
+        releaseDate,
+        const DeepCollectionEquality().hash(genres),
+        runtime,
+        budget,
+        revenue,
+        const DeepCollectionEquality().hash(productionCompanies),
+        status,
+        tagline,
+        adult,
+        originalLanguage,
+        originalTitle,
+        popularity,
+        video
+      ]);
+
+  @override
+  String toString() {
+    return 'MovieDetail(id: $id, title: $title, overview: $overview, posterPath: $posterPath, backdropPath: $backdropPath, voteAverage: $voteAverage, voteCount: $voteCount, releaseDate: $releaseDate, genres: $genres, runtime: $runtime, budget: $budget, revenue: $revenue, productionCompanies: $productionCompanies, status: $status, tagline: $tagline, adult: $adult, originalLanguage: $originalLanguage, originalTitle: $originalTitle, popularity: $popularity, video: $video)';
   }
 }
 
 /// @nodoc
-abstract class _$$MovieDetailImplCopyWith<$Res>
-    implements $MovieDetailCopyWith<$Res> {
-  factory _$$MovieDetailImplCopyWith(
-          _$MovieDetailImpl value, $Res Function(_$MovieDetailImpl) then) =
-      __$$MovieDetailImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $MovieDetailCopyWith<$Res> {
+  factory $MovieDetailCopyWith(
+          MovieDetail value, $Res Function(MovieDetail) _then) =
+      _$MovieDetailCopyWithImpl;
   @useResult
   $Res call(
       {int id,
@@ -223,13 +140,14 @@ abstract class _$$MovieDetailImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$MovieDetailImplCopyWithImpl<$Res>
-    extends _$MovieDetailCopyWithImpl<$Res, _$MovieDetailImpl>
-    implements _$$MovieDetailImplCopyWith<$Res> {
-  __$$MovieDetailImplCopyWithImpl(
-      _$MovieDetailImpl _value, $Res Function(_$MovieDetailImpl) _then)
-      : super(_value, _then);
+class _$MovieDetailCopyWithImpl<$Res> implements $MovieDetailCopyWith<$Res> {
+  _$MovieDetailCopyWithImpl(this._self, this._then);
 
+  final MovieDetail _self;
+  final $Res Function(MovieDetail) _then;
+
+  /// Create a copy of MovieDetail
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -254,95 +172,375 @@ class __$$MovieDetailImplCopyWithImpl<$Res>
     Object? popularity = freezed,
     Object? video = freezed,
   }) {
-    return _then(_$MovieDetailImpl(
+    return _then(_self.copyWith(
       id: null == id
-          ? _value.id
+          ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
       title: null == title
-          ? _value.title
+          ? _self.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
       overview: freezed == overview
-          ? _value.overview
+          ? _self.overview
           : overview // ignore: cast_nullable_to_non_nullable
               as String?,
       posterPath: freezed == posterPath
-          ? _value.posterPath
+          ? _self.posterPath
           : posterPath // ignore: cast_nullable_to_non_nullable
               as String?,
       backdropPath: freezed == backdropPath
-          ? _value.backdropPath
+          ? _self.backdropPath
           : backdropPath // ignore: cast_nullable_to_non_nullable
               as String?,
       voteAverage: freezed == voteAverage
-          ? _value.voteAverage
+          ? _self.voteAverage
           : voteAverage // ignore: cast_nullable_to_non_nullable
               as double?,
       voteCount: freezed == voteCount
-          ? _value.voteCount
+          ? _self.voteCount
           : voteCount // ignore: cast_nullable_to_non_nullable
               as int?,
       releaseDate: freezed == releaseDate
-          ? _value.releaseDate
+          ? _self.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as String?,
       genres: freezed == genres
-          ? _value._genres
+          ? _self.genres
           : genres // ignore: cast_nullable_to_non_nullable
               as List<Genre>?,
       runtime: freezed == runtime
-          ? _value.runtime
+          ? _self.runtime
           : runtime // ignore: cast_nullable_to_non_nullable
               as int?,
       budget: freezed == budget
-          ? _value.budget
+          ? _self.budget
           : budget // ignore: cast_nullable_to_non_nullable
               as int?,
       revenue: freezed == revenue
-          ? _value.revenue
+          ? _self.revenue
           : revenue // ignore: cast_nullable_to_non_nullable
               as int?,
       productionCompanies: freezed == productionCompanies
-          ? _value._productionCompanies
+          ? _self.productionCompanies
           : productionCompanies // ignore: cast_nullable_to_non_nullable
               as List<ProductionCompany>?,
       status: freezed == status
-          ? _value.status
+          ? _self.status
           : status // ignore: cast_nullable_to_non_nullable
               as String?,
       tagline: freezed == tagline
-          ? _value.tagline
+          ? _self.tagline
           : tagline // ignore: cast_nullable_to_non_nullable
               as String?,
       adult: freezed == adult
-          ? _value.adult
+          ? _self.adult
           : adult // ignore: cast_nullable_to_non_nullable
               as bool?,
       originalLanguage: freezed == originalLanguage
-          ? _value.originalLanguage
+          ? _self.originalLanguage
           : originalLanguage // ignore: cast_nullable_to_non_nullable
               as String?,
       originalTitle: freezed == originalTitle
-          ? _value.originalTitle
+          ? _self.originalTitle
           : originalTitle // ignore: cast_nullable_to_non_nullable
               as String?,
       popularity: freezed == popularity
-          ? _value.popularity
+          ? _self.popularity
           : popularity // ignore: cast_nullable_to_non_nullable
               as double?,
       video: freezed == video
-          ? _value.video
+          ? _self.video
           : video // ignore: cast_nullable_to_non_nullable
               as bool?,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [MovieDetail].
+extension MovieDetailPatterns on MovieDetail {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_MovieDetail value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _MovieDetail() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_MovieDetail value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _MovieDetail():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_MovieDetail value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _MovieDetail() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            int id,
+            String title,
+            String? overview,
+            String? posterPath,
+            String? backdropPath,
+            double? voteAverage,
+            int? voteCount,
+            String? releaseDate,
+            List<Genre>? genres,
+            int? runtime,
+            int? budget,
+            int? revenue,
+            List<ProductionCompany>? productionCompanies,
+            String? status,
+            String? tagline,
+            bool? adult,
+            String? originalLanguage,
+            String? originalTitle,
+            double? popularity,
+            bool? video)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _MovieDetail() when $default != null:
+        return $default(
+            _that.id,
+            _that.title,
+            _that.overview,
+            _that.posterPath,
+            _that.backdropPath,
+            _that.voteAverage,
+            _that.voteCount,
+            _that.releaseDate,
+            _that.genres,
+            _that.runtime,
+            _that.budget,
+            _that.revenue,
+            _that.productionCompanies,
+            _that.status,
+            _that.tagline,
+            _that.adult,
+            _that.originalLanguage,
+            _that.originalTitle,
+            _that.popularity,
+            _that.video);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            int id,
+            String title,
+            String? overview,
+            String? posterPath,
+            String? backdropPath,
+            double? voteAverage,
+            int? voteCount,
+            String? releaseDate,
+            List<Genre>? genres,
+            int? runtime,
+            int? budget,
+            int? revenue,
+            List<ProductionCompany>? productionCompanies,
+            String? status,
+            String? tagline,
+            bool? adult,
+            String? originalLanguage,
+            String? originalTitle,
+            double? popularity,
+            bool? video)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _MovieDetail():
+        return $default(
+            _that.id,
+            _that.title,
+            _that.overview,
+            _that.posterPath,
+            _that.backdropPath,
+            _that.voteAverage,
+            _that.voteCount,
+            _that.releaseDate,
+            _that.genres,
+            _that.runtime,
+            _that.budget,
+            _that.revenue,
+            _that.productionCompanies,
+            _that.status,
+            _that.tagline,
+            _that.adult,
+            _that.originalLanguage,
+            _that.originalTitle,
+            _that.popularity,
+            _that.video);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            int id,
+            String title,
+            String? overview,
+            String? posterPath,
+            String? backdropPath,
+            double? voteAverage,
+            int? voteCount,
+            String? releaseDate,
+            List<Genre>? genres,
+            int? runtime,
+            int? budget,
+            int? revenue,
+            List<ProductionCompany>? productionCompanies,
+            String? status,
+            String? tagline,
+            bool? adult,
+            String? originalLanguage,
+            String? originalTitle,
+            double? popularity,
+            bool? video)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _MovieDetail() when $default != null:
+        return $default(
+            _that.id,
+            _that.title,
+            _that.overview,
+            _that.posterPath,
+            _that.backdropPath,
+            _that.voteAverage,
+            _that.voteCount,
+            _that.releaseDate,
+            _that.genres,
+            _that.runtime,
+            _that.budget,
+            _that.revenue,
+            _that.productionCompanies,
+            _that.status,
+            _that.tagline,
+            _that.adult,
+            _that.originalLanguage,
+            _that.originalTitle,
+            _that.popularity,
+            _that.video);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 
-class _$MovieDetailImpl extends _MovieDetail {
-  const _$MovieDetailImpl(
+class _MovieDetail extends MovieDetail {
+  const _MovieDetail(
       {required this.id,
       required this.title,
       this.overview,
@@ -425,16 +623,19 @@ class _$MovieDetailImpl extends _MovieDetail {
   @override
   final bool? video;
 
+  /// Create a copy of MovieDetail
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'MovieDetail(id: $id, title: $title, overview: $overview, posterPath: $posterPath, backdropPath: $backdropPath, voteAverage: $voteAverage, voteCount: $voteCount, releaseDate: $releaseDate, genres: $genres, runtime: $runtime, budget: $budget, revenue: $revenue, productionCompanies: $productionCompanies, status: $status, tagline: $tagline, adult: $adult, originalLanguage: $originalLanguage, originalTitle: $originalTitle, popularity: $popularity, video: $video)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$MovieDetailCopyWith<_MovieDetail> get copyWith =>
+      __$MovieDetailCopyWithImpl<_MovieDetail>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MovieDetailImpl &&
+            other is _MovieDetail &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.overview, overview) ||
@@ -492,186 +693,178 @@ class _$MovieDetailImpl extends _MovieDetail {
         video
       ]);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$MovieDetailImplCopyWith<_$MovieDetailImpl> get copyWith =>
-      __$$MovieDetailImplCopyWithImpl<_$MovieDetailImpl>(this, _$identity);
-}
-
-abstract class _MovieDetail extends MovieDetail {
-  const factory _MovieDetail(
-      {required final int id,
-      required final String title,
-      final String? overview,
-      final String? posterPath,
-      final String? backdropPath,
-      final double? voteAverage,
-      final int? voteCount,
-      final String? releaseDate,
-      final List<Genre>? genres,
-      final int? runtime,
-      final int? budget,
-      final int? revenue,
-      final List<ProductionCompany>? productionCompanies,
-      final String? status,
-      final String? tagline,
-      final bool? adult,
-      final String? originalLanguage,
-      final String? originalTitle,
-      final double? popularity,
-      final bool? video}) = _$MovieDetailImpl;
-  const _MovieDetail._() : super._();
-
-  @override
-  int get id;
-  @override
-  String get title;
-  @override
-  String? get overview;
-  @override
-  String? get posterPath;
-  @override
-  String? get backdropPath;
-  @override
-  double? get voteAverage;
-  @override
-  int? get voteCount;
-  @override
-  String? get releaseDate;
-  @override
-  List<Genre>? get genres;
-  @override
-  int? get runtime;
-  @override
-  int? get budget;
-  @override
-  int? get revenue;
-  @override
-  List<ProductionCompany>? get productionCompanies;
-  @override
-  String? get status;
-  @override
-  String? get tagline;
-  @override
-  bool? get adult;
-  @override
-  String? get originalLanguage;
-  @override
-  String? get originalTitle;
-  @override
-  double? get popularity;
-  @override
-  bool? get video;
-  @override
-  @JsonKey(ignore: true)
-  _$$MovieDetailImplCopyWith<_$MovieDetailImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-mixin _$Genre {
-  int get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $GenreCopyWith<Genre> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $GenreCopyWith<$Res> {
-  factory $GenreCopyWith(Genre value, $Res Function(Genre) then) =
-      _$GenreCopyWithImpl<$Res, Genre>;
-  @useResult
-  $Res call({int id, String name});
-}
-
-/// @nodoc
-class _$GenreCopyWithImpl<$Res, $Val extends Genre>
-    implements $GenreCopyWith<$Res> {
-  _$GenreCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? name = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  String toString() {
+    return 'MovieDetail(id: $id, title: $title, overview: $overview, posterPath: $posterPath, backdropPath: $backdropPath, voteAverage: $voteAverage, voteCount: $voteCount, releaseDate: $releaseDate, genres: $genres, runtime: $runtime, budget: $budget, revenue: $revenue, productionCompanies: $productionCompanies, status: $status, tagline: $tagline, adult: $adult, originalLanguage: $originalLanguage, originalTitle: $originalTitle, popularity: $popularity, video: $video)';
   }
 }
 
 /// @nodoc
-abstract class _$$GenreImplCopyWith<$Res> implements $GenreCopyWith<$Res> {
-  factory _$$GenreImplCopyWith(
-          _$GenreImpl value, $Res Function(_$GenreImpl) then) =
-      __$$GenreImplCopyWithImpl<$Res>;
+abstract mixin class _$MovieDetailCopyWith<$Res>
+    implements $MovieDetailCopyWith<$Res> {
+  factory _$MovieDetailCopyWith(
+          _MovieDetail value, $Res Function(_MovieDetail) _then) =
+      __$MovieDetailCopyWithImpl;
   @override
   @useResult
-  $Res call({int id, String name});
+  $Res call(
+      {int id,
+      String title,
+      String? overview,
+      String? posterPath,
+      String? backdropPath,
+      double? voteAverage,
+      int? voteCount,
+      String? releaseDate,
+      List<Genre>? genres,
+      int? runtime,
+      int? budget,
+      int? revenue,
+      List<ProductionCompany>? productionCompanies,
+      String? status,
+      String? tagline,
+      bool? adult,
+      String? originalLanguage,
+      String? originalTitle,
+      double? popularity,
+      bool? video});
 }
 
 /// @nodoc
-class __$$GenreImplCopyWithImpl<$Res>
-    extends _$GenreCopyWithImpl<$Res, _$GenreImpl>
-    implements _$$GenreImplCopyWith<$Res> {
-  __$$GenreImplCopyWithImpl(
-      _$GenreImpl _value, $Res Function(_$GenreImpl) _then)
-      : super(_value, _then);
+class __$MovieDetailCopyWithImpl<$Res> implements _$MovieDetailCopyWith<$Res> {
+  __$MovieDetailCopyWithImpl(this._self, this._then);
 
-  @pragma('vm:prefer-inline')
+  final _MovieDetail _self;
+  final $Res Function(_MovieDetail) _then;
+
+  /// Create a copy of MovieDetail
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
     Object? id = null,
-    Object? name = null,
+    Object? title = null,
+    Object? overview = freezed,
+    Object? posterPath = freezed,
+    Object? backdropPath = freezed,
+    Object? voteAverage = freezed,
+    Object? voteCount = freezed,
+    Object? releaseDate = freezed,
+    Object? genres = freezed,
+    Object? runtime = freezed,
+    Object? budget = freezed,
+    Object? revenue = freezed,
+    Object? productionCompanies = freezed,
+    Object? status = freezed,
+    Object? tagline = freezed,
+    Object? adult = freezed,
+    Object? originalLanguage = freezed,
+    Object? originalTitle = freezed,
+    Object? popularity = freezed,
+    Object? video = freezed,
   }) {
-    return _then(_$GenreImpl(
+    return _then(_MovieDetail(
       id: null == id
-          ? _value.id
+          ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+      title: null == title
+          ? _self.title
+          : title // ignore: cast_nullable_to_non_nullable
               as String,
+      overview: freezed == overview
+          ? _self.overview
+          : overview // ignore: cast_nullable_to_non_nullable
+              as String?,
+      posterPath: freezed == posterPath
+          ? _self.posterPath
+          : posterPath // ignore: cast_nullable_to_non_nullable
+              as String?,
+      backdropPath: freezed == backdropPath
+          ? _self.backdropPath
+          : backdropPath // ignore: cast_nullable_to_non_nullable
+              as String?,
+      voteAverage: freezed == voteAverage
+          ? _self.voteAverage
+          : voteAverage // ignore: cast_nullable_to_non_nullable
+              as double?,
+      voteCount: freezed == voteCount
+          ? _self.voteCount
+          : voteCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      releaseDate: freezed == releaseDate
+          ? _self.releaseDate
+          : releaseDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      genres: freezed == genres
+          ? _self._genres
+          : genres // ignore: cast_nullable_to_non_nullable
+              as List<Genre>?,
+      runtime: freezed == runtime
+          ? _self.runtime
+          : runtime // ignore: cast_nullable_to_non_nullable
+              as int?,
+      budget: freezed == budget
+          ? _self.budget
+          : budget // ignore: cast_nullable_to_non_nullable
+              as int?,
+      revenue: freezed == revenue
+          ? _self.revenue
+          : revenue // ignore: cast_nullable_to_non_nullable
+              as int?,
+      productionCompanies: freezed == productionCompanies
+          ? _self._productionCompanies
+          : productionCompanies // ignore: cast_nullable_to_non_nullable
+              as List<ProductionCompany>?,
+      status: freezed == status
+          ? _self.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String?,
+      tagline: freezed == tagline
+          ? _self.tagline
+          : tagline // ignore: cast_nullable_to_non_nullable
+              as String?,
+      adult: freezed == adult
+          ? _self.adult
+          : adult // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      originalLanguage: freezed == originalLanguage
+          ? _self.originalLanguage
+          : originalLanguage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      originalTitle: freezed == originalTitle
+          ? _self.originalTitle
+          : originalTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      popularity: freezed == popularity
+          ? _self.popularity
+          : popularity // ignore: cast_nullable_to_non_nullable
+              as double?,
+      video: freezed == video
+          ? _self.video
+          : video // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
 
 /// @nodoc
+mixin _$Genre {
+  int get id;
+  String get name;
 
-class _$GenreImpl implements _Genre {
-  const _$GenreImpl({required this.id, required this.name});
-
-  @override
-  final int id;
-  @override
-  final String name;
-
-  @override
-  String toString() {
-    return 'Genre(id: $id, name: $name)';
-  }
+  /// Create a copy of Genre
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $GenreCopyWith<Genre> get copyWith =>
+      _$GenreCopyWithImpl<Genre>(this as Genre, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GenreImpl &&
+            other is Genre &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name));
   }
@@ -679,106 +872,335 @@ class _$GenreImpl implements _Genre {
   @override
   int get hashCode => Object.hash(runtimeType, id, name);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$GenreImplCopyWith<_$GenreImpl> get copyWith =>
-      __$$GenreImplCopyWithImpl<_$GenreImpl>(this, _$identity);
-}
-
-abstract class _Genre implements Genre {
-  const factory _Genre({required final int id, required final String name}) =
-      _$GenreImpl;
-
-  @override
-  int get id;
-  @override
-  String get name;
-  @override
-  @JsonKey(ignore: true)
-  _$$GenreImplCopyWith<_$GenreImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-mixin _$ProductionCompany {
-  int get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String? get logoPath => throw _privateConstructorUsedError;
-  String? get originCountry => throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $ProductionCompanyCopyWith<ProductionCompany> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $ProductionCompanyCopyWith<$Res> {
-  factory $ProductionCompanyCopyWith(
-          ProductionCompany value, $Res Function(ProductionCompany) then) =
-      _$ProductionCompanyCopyWithImpl<$Res, ProductionCompany>;
-  @useResult
-  $Res call({int id, String name, String? logoPath, String? originCountry});
-}
-
-/// @nodoc
-class _$ProductionCompanyCopyWithImpl<$Res, $Val extends ProductionCompany>
-    implements $ProductionCompanyCopyWith<$Res> {
-  _$ProductionCompanyCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? logoPath = freezed,
-    Object? originCountry = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      logoPath: freezed == logoPath
-          ? _value.logoPath
-          : logoPath // ignore: cast_nullable_to_non_nullable
-              as String?,
-      originCountry: freezed == originCountry
-          ? _value.originCountry
-          : originCountry // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  String toString() {
+    return 'Genre(id: $id, name: $name)';
   }
 }
 
 /// @nodoc
-abstract class _$$ProductionCompanyImplCopyWith<$Res>
-    implements $ProductionCompanyCopyWith<$Res> {
-  factory _$$ProductionCompanyImplCopyWith(_$ProductionCompanyImpl value,
-          $Res Function(_$ProductionCompanyImpl) then) =
-      __$$ProductionCompanyImplCopyWithImpl<$Res>;
+abstract mixin class $GenreCopyWith<$Res> {
+  factory $GenreCopyWith(Genre value, $Res Function(Genre) _then) =
+      _$GenreCopyWithImpl;
+  @useResult
+  $Res call({int id, String name});
+}
+
+/// @nodoc
+class _$GenreCopyWithImpl<$Res> implements $GenreCopyWith<$Res> {
+  _$GenreCopyWithImpl(this._self, this._then);
+
+  final Genre _self;
+  final $Res Function(Genre) _then;
+
+  /// Create a copy of Genre
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
+  $Res call({
+    Object? id = null,
+    Object? name = null,
+  }) {
+    return _then(_self.copyWith(
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: null == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [Genre].
+extension GenrePatterns on Genre {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Genre value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Genre() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_Genre value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Genre():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_Genre value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Genre() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(int id, String name)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Genre() when $default != null:
+        return $default(_that.id, _that.name);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(int id, String name) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Genre():
+        return $default(_that.id, _that.name);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(int id, String name)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Genre() when $default != null:
+        return $default(_that.id, _that.name);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+
+class _Genre implements Genre {
+  const _Genre({required this.id, required this.name});
+
+  @override
+  final int id;
+  @override
+  final String name;
+
+  /// Create a copy of Genre
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$GenreCopyWith<_Genre> get copyWith =>
+      __$GenreCopyWithImpl<_Genre>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _Genre &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id, name);
+
+  @override
+  String toString() {
+    return 'Genre(id: $id, name: $name)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$GenreCopyWith<$Res> implements $GenreCopyWith<$Res> {
+  factory _$GenreCopyWith(_Genre value, $Res Function(_Genre) _then) =
+      __$GenreCopyWithImpl;
+  @override
+  @useResult
+  $Res call({int id, String name});
+}
+
+/// @nodoc
+class __$GenreCopyWithImpl<$Res> implements _$GenreCopyWith<$Res> {
+  __$GenreCopyWithImpl(this._self, this._then);
+
+  final _Genre _self;
+  final $Res Function(_Genre) _then;
+
+  /// Create a copy of Genre
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? id = null,
+    Object? name = null,
+  }) {
+    return _then(_Genre(
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: null == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$ProductionCompany {
+  int get id;
+  String get name;
+  String? get logoPath;
+  String? get originCountry;
+
+  /// Create a copy of ProductionCompany
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ProductionCompanyCopyWith<ProductionCompany> get copyWith =>
+      _$ProductionCompanyCopyWithImpl<ProductionCompany>(
+          this as ProductionCompany, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ProductionCompany &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.logoPath, logoPath) ||
+                other.logoPath == logoPath) &&
+            (identical(other.originCountry, originCountry) ||
+                other.originCountry == originCountry));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, id, name, logoPath, originCountry);
+
+  @override
+  String toString() {
+    return 'ProductionCompany(id: $id, name: $name, logoPath: $logoPath, originCountry: $originCountry)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $ProductionCompanyCopyWith<$Res> {
+  factory $ProductionCompanyCopyWith(
+          ProductionCompany value, $Res Function(ProductionCompany) _then) =
+      _$ProductionCompanyCopyWithImpl;
   @useResult
   $Res call({int id, String name, String? logoPath, String? originCountry});
 }
 
 /// @nodoc
-class __$$ProductionCompanyImplCopyWithImpl<$Res>
-    extends _$ProductionCompanyCopyWithImpl<$Res, _$ProductionCompanyImpl>
-    implements _$$ProductionCompanyImplCopyWith<$Res> {
-  __$$ProductionCompanyImplCopyWithImpl(_$ProductionCompanyImpl _value,
-      $Res Function(_$ProductionCompanyImpl) _then)
-      : super(_value, _then);
+class _$ProductionCompanyCopyWithImpl<$Res>
+    implements $ProductionCompanyCopyWith<$Res> {
+  _$ProductionCompanyCopyWithImpl(this._self, this._then);
 
+  final ProductionCompany _self;
+  final $Res Function(ProductionCompany) _then;
+
+  /// Create a copy of ProductionCompany
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -787,31 +1209,197 @@ class __$$ProductionCompanyImplCopyWithImpl<$Res>
     Object? logoPath = freezed,
     Object? originCountry = freezed,
   }) {
-    return _then(_$ProductionCompanyImpl(
+    return _then(_self.copyWith(
       id: null == id
-          ? _value.id
+          ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
       name: null == name
-          ? _value.name
+          ? _self.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
       logoPath: freezed == logoPath
-          ? _value.logoPath
+          ? _self.logoPath
           : logoPath // ignore: cast_nullable_to_non_nullable
               as String?,
       originCountry: freezed == originCountry
-          ? _value.originCountry
+          ? _self.originCountry
           : originCountry // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [ProductionCompany].
+extension ProductionCompanyPatterns on ProductionCompany {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_ProductionCompany value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _ProductionCompany() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_ProductionCompany value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ProductionCompany():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_ProductionCompany value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ProductionCompany() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            int id, String name, String? logoPath, String? originCountry)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _ProductionCompany() when $default != null:
+        return $default(
+            _that.id, _that.name, _that.logoPath, _that.originCountry);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            int id, String name, String? logoPath, String? originCountry)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ProductionCompany():
+        return $default(
+            _that.id, _that.name, _that.logoPath, _that.originCountry);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            int id, String name, String? logoPath, String? originCountry)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _ProductionCompany() when $default != null:
+        return $default(
+            _that.id, _that.name, _that.logoPath, _that.originCountry);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 
-class _$ProductionCompanyImpl implements _ProductionCompany {
-  const _$ProductionCompanyImpl(
+class _ProductionCompany implements ProductionCompany {
+  const _ProductionCompany(
       {required this.id,
       required this.name,
       this.logoPath,
@@ -826,16 +1414,19 @@ class _$ProductionCompanyImpl implements _ProductionCompany {
   @override
   final String? originCountry;
 
+  /// Create a copy of ProductionCompany
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'ProductionCompany(id: $id, name: $name, logoPath: $logoPath, originCountry: $originCountry)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$ProductionCompanyCopyWith<_ProductionCompany> get copyWith =>
+      __$ProductionCompanyCopyWithImpl<_ProductionCompany>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ProductionCompanyImpl &&
+            other is _ProductionCompany &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.logoPath, logoPath) ||
@@ -848,31 +1439,60 @@ class _$ProductionCompanyImpl implements _ProductionCompany {
   int get hashCode =>
       Object.hash(runtimeType, id, name, logoPath, originCountry);
 
-  @JsonKey(ignore: true)
+  @override
+  String toString() {
+    return 'ProductionCompany(id: $id, name: $name, logoPath: $logoPath, originCountry: $originCountry)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$ProductionCompanyCopyWith<$Res>
+    implements $ProductionCompanyCopyWith<$Res> {
+  factory _$ProductionCompanyCopyWith(
+          _ProductionCompany value, $Res Function(_ProductionCompany) _then) =
+      __$ProductionCompanyCopyWithImpl;
+  @override
+  @useResult
+  $Res call({int id, String name, String? logoPath, String? originCountry});
+}
+
+/// @nodoc
+class __$ProductionCompanyCopyWithImpl<$Res>
+    implements _$ProductionCompanyCopyWith<$Res> {
+  __$ProductionCompanyCopyWithImpl(this._self, this._then);
+
+  final _ProductionCompany _self;
+  final $Res Function(_ProductionCompany) _then;
+
+  /// Create a copy of ProductionCompany
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  _$$ProductionCompanyImplCopyWith<_$ProductionCompanyImpl> get copyWith =>
-      __$$ProductionCompanyImplCopyWithImpl<_$ProductionCompanyImpl>(
-          this, _$identity);
+  $Res call({
+    Object? id = null,
+    Object? name = null,
+    Object? logoPath = freezed,
+    Object? originCountry = freezed,
+  }) {
+    return _then(_ProductionCompany(
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: null == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      logoPath: freezed == logoPath
+          ? _self.logoPath
+          : logoPath // ignore: cast_nullable_to_non_nullable
+              as String?,
+      originCountry: freezed == originCountry
+          ? _self.originCountry
+          : originCountry // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
 }
 
-abstract class _ProductionCompany implements ProductionCompany {
-  const factory _ProductionCompany(
-      {required final int id,
-      required final String name,
-      final String? logoPath,
-      final String? originCountry}) = _$ProductionCompanyImpl;
-
-  @override
-  int get id;
-  @override
-  String get name;
-  @override
-  String? get logoPath;
-  @override
-  String? get originCountry;
-  @override
-  @JsonKey(ignore: true)
-  _$$ProductionCompanyImplCopyWith<_$ProductionCompanyImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

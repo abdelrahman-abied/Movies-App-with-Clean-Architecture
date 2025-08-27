@@ -8,7 +8,7 @@ class MovieModel extends Equatable {
   final int id;
   final String title;
   final String? overview;
-  @JsonKey(name: "poster_path")
+  @JsonKey(name: "poster_path" , defaultValue: "")
   final String? posterPath;
   @JsonKey(name: "backdrop_path")
   final String? backdropPath;

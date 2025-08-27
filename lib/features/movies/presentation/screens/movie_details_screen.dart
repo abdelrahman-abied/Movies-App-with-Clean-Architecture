@@ -277,43 +277,41 @@ class _MovieDetailsScreenState extends ConsumerState<MovieDetailsScreen> {
 
     if (details.isEmpty) return const SizedBox.shrink();
 
-    return Container(
-      color: Colors.amber,
-      child: GridView.builder(
-        padding: EdgeInsets.zero,
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          childAspectRatio: 3,
-          crossAxisSpacing: 8,
-          mainAxisSpacing: 4,
-        ),
-        itemCount: details.length,
-        itemBuilder: (context, index) {
-          final detail = details[index];
-          return Column(
-            children: [
-              Text(
-                detail.key,
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.grey[600],
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              const SizedBox(height: 4),
-              Text(
-                detail.value,
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ],
-          );
-        },
+    return GridView.builder(
+      padding: EdgeInsets.zero,
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        childAspectRatio: 3,
+        crossAxisSpacing: 8,
+        mainAxisSpacing: 4,
       ),
+      itemCount: details.length,
+      itemBuilder: (context, index) {
+        final detail = details[index];
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              detail.key,
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.grey[600],
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              detail.value,
+              style: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 

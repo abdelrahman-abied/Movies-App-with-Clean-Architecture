@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 
 class LoggingInterceptor extends Interceptor {
   final bool enableLogging;
@@ -8,10 +9,10 @@ class LoggingInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     if (enableLogging) {
-      print('🌐 REQUEST[${options.method}] => PATH: ${options.path}');
-      print('🌐 Headers: ${options.headers}');
+      debugPrint('🌐 REQUEST[${options.method}] => PATH: ${options.path}');
+      debugPrint('🌐 Headers: ${options.headers}');
       if (options.data != null) {
-        print('🌐 Data: ${options.data}');
+        debugPrint('🌐 Data: ${options.data}');
       }
     }
     handler.next(options);
@@ -20,9 +21,9 @@ class LoggingInterceptor extends Interceptor {
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) {
     if (enableLogging) {
-      print(
+      debugPrint(
           '✅ RESPONSE[${response.statusCode}] => PATH: ${response.requestOptions.path}');
-      print('✅ Data: ${response.data}');
+      debugPrint('✅ Data: ${response.data}');
     }
     handler.next(response);
   }
@@ -30,11 +31,11 @@ class LoggingInterceptor extends Interceptor {
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) {
     if (enableLogging) {
-      print(
+      debugPrint(
           '❌ ERROR[${err.response?.statusCode}] => PATH: ${err.requestOptions.path}');
-      print('❌ Message: ${err.message}');
+      debugPrint('❌ Message: ${err.message}');
       if (err.response?.data != null) {
-        print('❌ Response Data: ${err.response?.data}');
+        debugPrint('❌ Response Data: ${err.response?.data}');
       }
     }
     handler.next(err);

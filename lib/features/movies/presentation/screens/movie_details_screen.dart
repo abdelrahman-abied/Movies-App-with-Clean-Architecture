@@ -78,7 +78,7 @@ class _MovieDetailsScreenState extends ConsumerState<MovieDetailsScreen> {
                         end: Alignment.bottomCenter,
                         colors: [
                           Colors.transparent,
-                          Colors.black.withOpacity(0.7),
+                          Colors.black.withValues( alpha: 0.7),
                         ],
                       ),
                     ),
@@ -163,7 +163,7 @@ class _MovieDetailsScreenState extends ConsumerState<MovieDetailsScreen> {
               children: movieDetail.safeGenres.map((genre) {
                 return Chip(
                   label: Text(genre.name),
-                  backgroundColor: Theme.of(context).primaryColor.withOpacity(0.1),
+                  backgroundColor: Theme.of(context).primaryColor.withValues( alpha:0.1),
                   labelStyle: TextStyle(
                     color: Theme.of(context).primaryColor,
                     fontWeight: FontWeight.w500,
@@ -315,12 +315,4 @@ class _MovieDetailsScreenState extends ConsumerState<MovieDetailsScreen> {
     );
   }
 
-  String _formatDate(String dateString) {
-    try {
-      final date = DateTime.parse(dateString);
-      return '${date.day}/${date.month}/${date.year}';
-    } catch (e) {
-      return dateString;
-    }
-  }
 }

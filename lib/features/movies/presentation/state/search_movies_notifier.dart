@@ -76,20 +76,20 @@ class SearchMoviesNotifier extends StateNotifier<MovieState> {
   }
 
   String _getErrorMessage(Failure failure) {
-    switch (failure.runtimeType) {
-      case NoInternetFailure:
+    switch (failure) {
+      case NoInternetFailure():
         return 'No internet connection';
-      case ServerFailure:
+      case ServerFailure():
         return 'Server error occurred';
-      case NetworkFailure:
+      case NetworkFailure():
         return 'Network error';
-      case TimeoutFailure:
+      case TimeoutFailure():
         return 'Request timeout';
-      case UnauthorizedFailure:
+      case UnauthorizedFailure():
         return 'Unauthorized access';
-      case NotFoundFailure:
+      case NotFoundFailure():
         return 'Resource not found';
-      case ValidationFailure:
+      case ValidationFailure():
         return 'Validation error';
       default:
         return failure.message;

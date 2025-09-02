@@ -22,7 +22,9 @@ const String tmdbApiKey = 'e7079d79292c2a0449a4c141c026ef28';
 
 // Dio provider
 final dioProvider = Provider<Dio>((ref) {
-  return DioClient.createMovieDio();
+  return DioClient.createMovieDio(
+    
+  );
 });
 
 // Connectivity provider

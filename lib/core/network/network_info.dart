@@ -15,7 +15,7 @@ class NetworkInfoImpl implements NetworkInfo {
   Future<Either<Failure, bool>> get isConnected async {
     try {
       final connectivityResult = await connectivity.checkConnectivity();
-      final isConnected = connectivityResult != ConnectivityResult.none;
+      final isConnected = connectivityResult.first != ConnectivityResult.none;
       
       if (isConnected) {
         return const Right(true);

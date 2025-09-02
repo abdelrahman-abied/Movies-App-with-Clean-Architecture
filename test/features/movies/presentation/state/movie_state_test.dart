@@ -310,7 +310,7 @@ void main() {
     });
 
     test('should support copyWith for MovieError', () {
-      const state = MovieState.error(message: 'Test error');
+      // const state = MovieState.error(message: 'Test error');
       
       // Create a new state with updated values
       const updatedState = MovieState.error(

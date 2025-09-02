@@ -1,8 +1,7 @@
-import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/annotations.dart';
-import 'package:flutter_application_1/features/movies/domain/entities/movie.dart';
 import 'package:flutter_application_1/features/movies/domain/usecases/get_popular_movies.dart';
 import 'package:flutter_application_1/features/movies/domain/usecases/get_top_rated_movies.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/annotations.dart';
 
 // TODO: Generate mocks with: flutter packages pub run build_runner build
 // import 'movie_notifier_test.mocks.dart';
@@ -23,12 +22,12 @@ void main() {
     //   container = ProviderContainer();
     // });
 
-    const tMovies = [
-      Movie(id: 1, title: 'Test Movie 1'),
-      Movie(id: 2, title: 'Test Movie 2'),
-    ];
+    // const tMovies = [
+    //   Movie(id: 1, title: 'Test Movie 1'),
+    //   Movie(id: 2, title: 'Test Movie 2'),
+    // ];
 
-    const tParams = GetPopularMoviesParams(page: 1);
+    // const tParams = GetPopularMoviesParams(page: 1);
 
     test('should create MovieNotifier', () {
       // TODO: Uncomment when mocks are generated

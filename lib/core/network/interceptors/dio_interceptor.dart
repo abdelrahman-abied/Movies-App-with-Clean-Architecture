@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+
 import '../../error/exceptions.dart';
 
 class AuthInterceptor extends Interceptor {
@@ -39,8 +40,7 @@ class AuthInterceptor extends Interceptor {
   }
 
   @override
-  Future<void> onError(
-      DioException err, ErrorInterceptorHandler handler) async {
+  Future<void> onError(DioException err, ErrorInterceptorHandler handler) async {
     // Handle 401 Unauthorized errors (token expired)
     if (err.response?.statusCode == 401) {
       try {
@@ -51,8 +51,7 @@ class AuthInterceptor extends Interceptor {
 
           if (newAccessToken != null && newAccessToken.isNotEmpty) {
             // Retry the original request with new token
-            final response =
-                await _retryRequest(err.requestOptions, newAccessToken);
+            final response = await _retryRequest(err.requestOptions, newAccessToken);
             handler.resolve(response);
             return;
           }
@@ -60,8 +59,7 @@ class AuthInterceptor extends Interceptor {
 
         // If refresh failed, notify about token expiration
         onTokenExpired?.call();
-        handler.reject(
-            _createCustomException(err, 'Token expired and refresh failed'));
+        handler.reject(_createCustomException(err, 'Token expired and refresh failed'));
       } catch (refreshError) {
         // If refresh throws an error, notify about auth failure
         onAuthFailed?.call();
@@ -99,8 +97,7 @@ class AuthInterceptor extends Interceptor {
     );
   }
 
-  DioException _createCustomException(DioException err,
-      [String? customMessage]) {
+  DioException _createCustomException(DioException err, [String? customMessage]) {
     final message = customMessage ?? _getErrorMessage(err);
     final code = err.response?.statusCode?.toString();
 
@@ -200,8 +197,7 @@ class AuthInterceptor extends Interceptor {
 
         if (data != null && data is Map<String, dynamic>) {
           // Try to extract error message from response data
-          final errorMessage =
-              data['message'] ?? data['error'] ?? data['detail'];
+          final errorMessage = data['message'] ?? data['error'] ?? data['detail'];
           if (errorMessage != null) {
             return errorMessage.toString();
           }

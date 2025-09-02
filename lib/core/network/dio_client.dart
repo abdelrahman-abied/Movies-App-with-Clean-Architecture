@@ -1,8 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+
 import 'interceptors/dio_interceptor.dart';
-import 'interceptors/retry_interceptor.dart';
 import 'interceptors/logging_interceptor.dart';
+import 'interceptors/retry_interceptor.dart';
 
 class DioClient {
   static Dio createDio({
